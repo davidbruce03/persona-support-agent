@@ -511,15 +511,18 @@ if user_input:
         st.stop()
 
     # Add user message to display
-    st.session_state.messages.append({
-        "role": "user",
-        "content": user_input
-    })
-    st.session_state.conversation_history.append({
-        "role": "user",
-        "content": user_input,
-        "persona": None
-    })
+    # Only add user message if not already added
+    last_msg = st.session_state.messages[-1] if st.session_state.messages else None
+    if not last_msg or last_msg.get("content") != user_input or last_msg.get("role") != "user":
+        st.session_state.messages.append({
+            "role": "user",
+            "content": user_input
+        })
+        st.session_state.conversation_history.append({
+            "role": "user",
+            "content": user_input,
+            "persona": None
+        })
 
     # Process with full pipeline
     with st.spinner("🔍 Analyzing persona · Retrieving context · Generating response..."):
@@ -548,7 +551,6 @@ if user_input:
                 "classification_reasoning": result.get("classification_reasoning", "")
             })
 
-            # Update conversation history for escalation tracking
             st.session_state.conversation_history.append({
                 "role": "assistant",
                 "content": result["response"],
@@ -559,4 +561,5 @@ if user_input:
             import traceback
             st.error(f"❌ Pipeline error: {str(e)}")
             st.code(traceback.format_exc())
+
     st.rerun()
