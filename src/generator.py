@@ -181,7 +181,7 @@ def generate_adaptive_response(
 
     # Include recent conversation history for context (last 6 turns)
     recent_history = conversation_history[-6:] if conversation_history else []
-   for turn in recent_history:
+    for turn in recent_history:
         if turn.get("role") and turn.get("content"):
             # Gemini uses "model" not "assistant"
             role = "model" if turn["role"] == "assistant" else "user"
