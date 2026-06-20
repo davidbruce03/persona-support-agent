@@ -437,6 +437,14 @@ if not api_ok:
 if not st.session_state.kb_loaded:
     st.info("👈 **Click 'Load / Refresh Knowledge Base'** in the sidebar to start.")
 
+# Show persistent error if any
+if "last_error" in st.session_state and st.session_state.last_error:
+    st.error("❌ Pipeline error — see details below:")
+    st.code(st.session_state.last_error)
+    if st.button("Clear Error"):
+        st.session_state.last_error = None
+        st.rerun()
+
 # ── Render Chat History ───────────────────────────────────────────────────────
 for msg in st.session_state.messages:
     if msg["role"] == "user":
