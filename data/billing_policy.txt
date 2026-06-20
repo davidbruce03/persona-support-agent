@@ -1,0 +1,143 @@
+BILLING POLICY AND REFUND GUIDE
+================================
+
+Last Updated: January 2025
+
+1. SUBSCRIPTION PLANS
+---------------------
+
+Free Plan:
+- Cost: $0/month
+- Features: Up to 1,000 API calls/day, community support, basic analytics
+- Limitations: No SLA, no priority support, shared infrastructure
+
+Pro Plan:
+- Cost: $49/month (billed monthly) or $39/month (billed annually)
+- Features: Up to 50,000 API calls/day, email support (24-48hr response), advanced analytics, dedicated IP
+- SLA: 99.9% uptime guarantee
+
+Enterprise Plan:
+- Cost: Custom pricing (contact sales@example.com)
+- Features: Unlimited API calls, 24/7 phone and email support, dedicated account manager, custom SLA
+- SLA: 99.99% uptime guarantee with financial credits
+
+
+2. BILLING CYCLE
+----------------
+
+Billing occurs on the same day each month as your initial subscription date.
+For example, if you subscribed on the 15th, you will be billed on the 15th of each month.
+
+Payment methods accepted:
+- Visa, MasterCard, American Express
+- PayPal
+- Bank wire transfer (Enterprise only)
+- Invoice billing (Enterprise only, Net-30 terms)
+
+All prices are in USD. International customers may see currency conversion charges from their bank.
+
+
+3. INVOICE AND RECEIPT POLICY
+------------------------------
+
+Invoices are automatically emailed to the billing contact on file within 24 hours of each charge.
+To download past invoices:
+1. Log in to your account
+2. Navigate to Settings > Billing > Invoice History
+3. Click "Download PDF" next to any invoice
+
+To update your billing email address:
+1. Go to Settings > Billing > Billing Contact
+2. Enter new email address
+3. Click Save Changes
+A confirmation email will be sent to both the old and new address.
+
+
+4. REFUND POLICY
+----------------
+
+Standard Refund Window:
+- Refunds are available within 7 days of the initial charge for new subscriptions only.
+- Renewal charges are non-refundable except in cases of system errors on our part.
+
+Eligibility Criteria for Refunds:
+- First-time subscribers only (not applicable to renewals)
+- Account must not have exceeded 10% of plan usage limits
+- Request must be submitted within 7 days of charge date
+
+How to Request a Refund:
+1. Email billing@example.com with subject line: "Refund Request - [Your Account Email]"
+2. Include your account ID, charge date, and reason for the refund
+3. Refunds are processed within 5-10 business days to the original payment method
+
+Exceptions (Non-refundable situations):
+- Charges older than 7 days
+- Accounts that violated our Terms of Service
+- Accounts with active disputes or chargebacks
+- Add-on purchases (additional API credits, premium features)
+
+
+5. DISPUTE RESOLUTION
+----------------------
+
+If you believe you have been charged incorrectly:
+1. First, review your invoice for details on what was charged
+2. Check if a team member added seats or upgraded the plan
+3. Contact billing@example.com within 30 days of the charge
+4. Our billing team will investigate and respond within 3 business days
+
+For urgent billing issues affecting service access, call our billing hotline:
+1-800-555-0199 (Mon-Fri, 9AM-6PM EST)
+
+Chargeback Warning:
+Initiating a chargeback with your bank before contacting us will result in immediate account suspension.
+We strongly recommend contacting us first to resolve any billing discrepancies amicably.
+
+
+6. PLAN UPGRADES AND DOWNGRADES
+---------------------------------
+
+Upgrades:
+- Effective immediately upon confirmation
+- You will be charged a prorated amount for the remainder of the current billing period
+- New limits take effect instantly
+
+Downgrades:
+- Effective at the end of the current billing period
+- No prorated refund is issued for the unused portion
+- Data and configurations are preserved for 30 days after downgrade
+
+Plan Cancellation:
+- Cancel anytime from Settings > Billing > Cancel Plan
+- Access continues until end of paid period
+- Data is retained for 90 days after cancellation for export purposes
+- After 90 days, all data is permanently deleted
+
+
+7. DUPLICATE CHARGE RESOLUTION
+--------------------------------
+
+If you see a duplicate charge on your statement:
+1. Check if you have multiple accounts using the same payment method
+2. Log in and verify under Settings > Billing > Payment History
+3. Contact billing@example.com with both charge dates and amounts
+4. Our team will investigate within 2 business days
+5. Confirmed duplicates are refunded within 5 business days
+
+Common causes of apparent duplicate charges:
+- Annual and monthly plan overlap during plan switching
+- Failed payment retried successfully on a different date
+- Family or team members sharing a payment method across separate accounts
+
+
+8. SLA CREDITS
+--------------
+
+If uptime falls below our guaranteed SLA:
+- Pro Plan (99.9%): Credits issued for each hour below SLA at 10% of monthly fee per hour
+- Enterprise Plan (99.99%): Credits issued per the custom SLA agreement
+
+To claim SLA credits:
+1. File a report at support@example.com within 30 days of the incident
+2. Reference the incident ID from status.example.com
+3. Credits are applied to the next invoice, not issued as cash refunds
