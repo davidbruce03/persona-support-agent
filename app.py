@@ -330,16 +330,21 @@ with st.sidebar:
     else:
         if st.button("🔄 Load / Refresh Knowledge Base", use_container_width=True):
             with st.spinner("Loading pipeline and ingesting documents..."):
+        # Clear cache to force fresh pipeline
+                load_rag_pipeline.clear()
                 pipeline = load_rag_pipeline()
                 st.session_state.rag_pipeline = pipeline
+
+                # Always re-ingest on cloud (no persistent storage)
+                pipeline.ingest_all_documents()
                 stats = pipeline.get_collection_stats()
 
-                if stats["total_chunks"] == 0:
-                    pipeline.ingest_all_documents()
-                    stats = pipeline.get_collection_stats()
-
                 st.session_state.kb_loaded = True
-                st.success(f"✅ {stats['total_chunks']} chunks indexed")
+                if stats["total_chunks"] > 0:
+                    st.success(f"✅ {stats['total_chunks']} chunks indexed")
+                else:
+                    st.error("❌ No chunks indexed. Check data/ folder.")
+
 
         if st.session_state.kb_loaded and st.session_state.rag_pipeline:
             stats = st.session_state.rag_pipeline.get_collection_stats()
@@ -551,7 +556,7 @@ if user_input:
             })
 
         except Exception as e:
+            import traceback
             st.error(f"❌ Pipeline error: {str(e)}")
-            st.info("Check your API key and ensure the knowledge base is loaded.")
-
+            st.code(traceback.format_exc())
     st.rerun()
