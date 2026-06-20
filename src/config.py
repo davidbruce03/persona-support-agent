@@ -23,8 +23,7 @@ CHUNK_OVERLAP: int = 50        # Overlap between adjacent chunks
 TOP_K_RESULTS: int = 3         # Number of top chunks to retrieve
 
 # ── Vector Database ──────────────────────────────────────────────────────────
-CHROMA_DB_DIR: str = "./chroma_db"
-COLLECTION_NAME: str = "support_knowledge_base"
+FAISS_INDEX_DIR: str = "./faiss_index"
 
 # ── Data Directory ────────────────────────────────────────────────────────────
 DATA_DIR: str = "./data"

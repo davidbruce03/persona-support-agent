@@ -61,7 +61,7 @@ When a message arrives, the agent:
 | Language | Python | 3.11+ |
 | LLM | Google Gemini 2.5 Flash | `gemini-2.5-flash` |
 | Embeddings | Gemini Embeddings | `text-embedding-004` |
-| Vector DB | ChromaDB | ≥0.4.0 |
+| Vector DB | FAISS | ≥1.12.0 |
 | RAG Framework | LangChain | ≥0.1.0 |
 | PDF Parsing | pypdf | ≥3.0.0 |
 | UI | Streamlit | ≥1.30.0 |
@@ -188,9 +188,9 @@ This preserves paragraph and sentence integrity, preventing important context (l
 - Chosen for its strong semantic understanding and tight integration with Gemini's generation models.
 
 ### 3. Vector Database
-- **ChromaDB** with persistent local storage (`./chroma_db`)
-- Uses **cosine similarity** (`hnsw:space: cosine`)
-- Persistent storage prevents re-indexing on every session restart
+- **FAISS** with persistent local storage (`./faiss_index`)
+- Uses **cosine similarity** (IndexFlatIP with L2 normalization)
+- Re-ingested on every Streamlit Cloud session start
 
 ### 4. Retrieval Strategy
 - **K = 3** top chunks retrieved per query
